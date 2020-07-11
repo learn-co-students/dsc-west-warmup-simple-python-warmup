@@ -61,7 +61,7 @@ with open(path, 'rb') as church_file:
 
 ```python
 # Your code here
-
+non_driving_church_goers = None
 ```
 
 ***Test the results with the cell below***
