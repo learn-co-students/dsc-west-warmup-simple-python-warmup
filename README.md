@@ -1,16 +1,38 @@
+
 # Light Coding Practice
 
 
 ```python
+### BEGIN SOLUTION
+
+
 from test_scripts.test_class import Test
 test = Test()
+
+from test_scripts.test_class import Test
+test = Test()
+
+test.save()
+
+
+
+### END SOLUTION
 ```
 
 
 ```python
-# __SOLUTION__
+# PUT ALL WORK FOR THE ABOVE QUESTION ABOVE THIS CELL
+# THIS UNALTERABLE CELL CONTAINS HIDDEN TESTS
+
+### BEGIN HIDDEN TESTS
+
 from test_scripts.test_class import Test
 test = Test()
+
+test.run_test()
+
+
+### END HIDDEN TESTS
 ```
 
 # #1
@@ -30,33 +52,76 @@ The given string is not nil/null/NULL/None, so you don't have to check that.
 
 
 ```python
+### BEGIN SOLUTION
+
+
+from test_scripts.test_class import Test
+test = Test()
+
 def alphanumeric(string):
-    pass
+    return string.isalnum()
+
+test.save()
+
+
+
+### END SOLUTION
 ```
 
 
 ```python
-# __SOLUTION__
-def alphanumeric(string):
-    return string.isalnum()
+# PUT ALL WORK FOR THE ABOVE QUESTION ABOVE THIS CELL
+# THIS UNALTERABLE CELL CONTAINS HIDDEN TESTS
+
+### BEGIN HIDDEN TESTS
+
+from test_scripts.test_class import Test
+test = Test()
+
+test.run_test()
+
+
+### END HIDDEN TESTS
 ```
 
 ***Test your function with the cell below***
 
 
 ```python
-test.test_alphanumeric(alphanumeric)
-```
+### BEGIN SOLUTION
 
 
-```python
-#__SOLUTION__
+from test_scripts.test_class import Test
+test = Test()
+
 test.test_alphanumeric(alphanumeric)
+
+test.save()
+
+
+
+### END SOLUTION
 ```
 
 
 ✅ **Hey, you did it.  Good job.**
 
+
+
+```python
+# PUT ALL WORK FOR THE ABOVE QUESTION ABOVE THIS CELL
+# THIS UNALTERABLE CELL CONTAINS HIDDEN TESTS
+
+### BEGIN HIDDEN TESTS
+
+from test_scripts.test_class import Test
+test = Test()
+
+test.run_test()
+
+
+### END HIDDEN TESTS
+```
 
 # #2
 
@@ -69,20 +134,12 @@ In the following cell, we import two sets.
 
 
 ```python
-import pickle
-
-path = os.path.join('data', 'car_owners.pkl')
-with open(path, 'rb') as driver_file:
-    car_owners = pickle.load(driver_file)
-    
-path = os.path.join('data', 'church_goers.pkl')
-with open(path, 'rb') as church_file:
-    church_goers = pickle.load(church_file)
-```
+### BEGIN SOLUTION
 
 
-```python
-# __SOLUTION__
+from test_scripts.test_class import Test
+test = Test()
+
 import pickle
 import os
 
@@ -93,39 +150,104 @@ with open(path, 'rb') as driver_file:
 path = os.path.join('data', 'church_goers.pkl')
 with open(path, 'rb') as church_file:
     church_goers = pickle.load(church_file)
+
+test.save()
+
+
+
+### END SOLUTION
+```
+
+
+```python
+# PUT ALL WORK FOR THE ABOVE QUESTION ABOVE THIS CELL
+# THIS UNALTERABLE CELL CONTAINS HIDDEN TESTS
+
+### BEGIN HIDDEN TESTS
+
+from test_scripts.test_class import Test
+test = Test()
+
+test.run_test()
+
+
+### END HIDDEN TESTS
 ```
 
 <u>In cell below,</u> find the members of the community that do not own cars and attend church regularly.
 
 
 ```python
-# Your code here
-non_driving_church_goers = None
+### BEGIN SOLUTION
+
+
+from test_scripts.test_class import Test
+test = Test()
+
+
+non_driving_church_goers = church_goers.difference(car_owners)
+
+test.save()
+
+
+
+### END SOLUTION
 ```
 
 
 ```python
-# __SOLUTION__
+# PUT ALL WORK FOR THE ABOVE QUESTION ABOVE THIS CELL
+# THIS UNALTERABLE CELL CONTAINS HIDDEN TESTS
 
-non_driving_church_goers = church_goers.difference(car_owners)
+### BEGIN HIDDEN TESTS
+
+from test_scripts.test_class import Test
+test = Test()
+
+test.run_test()
+
+
+### END HIDDEN TESTS
 ```
 
 ***Test the results with the cell below***
 
 
 ```python
-test.run_test(non_driving_church_goers, 'set_problem')
-```
+### BEGIN SOLUTION
 
 
-```python
-# __SOLUTION__
+from test_scripts.test_class import Test
+test = Test()
+
 test.run_test(non_driving_church_goers, 'set_problem')
+
+test.save()
+
+
+
+### END SOLUTION
 ```
 
 
 ✅ **Hey, you did it.  Good job.**
 
+
+
+```python
+# PUT ALL WORK FOR THE ABOVE QUESTION ABOVE THIS CELL
+# THIS UNALTERABLE CELL CONTAINS HIDDEN TESTS
+
+### BEGIN HIDDEN TESTS
+
+from test_scripts.test_class import Test
+test = Test()
+
+test.run_test()
+
+
+### END HIDDEN TESTS
+```
 
 # #3
 **We want to identify the individual words within hashtags.**
@@ -138,14 +260,12 @@ Every hashtag will use `PascalCase` which means every word will begin with a cap
 
 
 ```python
-# Your code here
-def split_hashtag(string):
-    pass
-```
+### BEGIN SOLUTION
 
 
-```python
-# __SOLUTION__
+from test_scripts.test_class import Test
+test = Test()
+
 def split_hashtag(string):
     data = string.replace('#', '')
     first_letter = 0
@@ -161,21 +281,65 @@ def split_hashtag(string):
             collected.append(data[first_letter:])
     return collected
                 
+
+test.save()
+
+
+
+### END SOLUTION
+```
+
+
+```python
+# PUT ALL WORK FOR THE ABOVE QUESTION ABOVE THIS CELL
+# THIS UNALTERABLE CELL CONTAINS HIDDEN TESTS
+
+### BEGIN HIDDEN TESTS
+
+from test_scripts.test_class import Test
+test = Test()
+
+test.run_test()
+
+
+### END HIDDEN TESTS
 ```
 
 ***Run the cell below to test your function!***
 
 
 ```python
-test.test_hashtag(split_hashtag)
-```
+### BEGIN SOLUTION
 
 
-```python
-# __SOLUTION__
+from test_scripts.test_class import Test
+test = Test()
+
 test.test_hashtag(split_hashtag)
+
+test.save()
+
+
+
+### END SOLUTION
 ```
 
 
 ✅ **Hey, you did it.  Good job.**
 
+
+
+```python
+# PUT ALL WORK FOR THE ABOVE QUESTION ABOVE THIS CELL
+# THIS UNALTERABLE CELL CONTAINS HIDDEN TESTS
+
+### BEGIN HIDDEN TESTS
+
+from test_scripts.test_class import Test
+test = Test()
+
+test.run_test()
+
+
+### END HIDDEN TESTS
+```
